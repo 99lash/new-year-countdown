@@ -32,15 +32,16 @@ function updateCountdown() {
   secondHTML.innerHTML = remainingSecond < 10 ? '0' + remainingSecond : remainingSecond;
 
   if (diffYearDateTime <= 0 || new Date() >= newYearDateTime) {
-  // if (remainingSecond < 45) {
+  // if (remainingSecond < 59) {
+    // yearHTML.innerHTML = currentYear +1;
     fireworks.start();
+    yearHTML.classList.add('change-color')
     clearInterval(intervalId);
     document.querySelector('.bottom').classList.toggle('fade-out');
     setTimeout(() => {
       document.querySelector('.bottom').classList.add('hidden');
       document.querySelector('.bottom').classList.toggle('fade-out');
       document.querySelector('.greet').classList.remove('hidden');
-      document.querySelector('.emoji').classList.remove('hidden');
     }, 2000);
     document.querySelector('.greet').classList.add('fade-in');
   }
