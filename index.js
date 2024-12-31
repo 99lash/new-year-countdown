@@ -33,7 +33,6 @@ function updateCountdown() {
 
   if (diffYearDateTime <= 0 || new Date() >= newYearDateTime) {
   // if (remainingSecond < 45) {
-    yearHTML.innerHTML = currentYear+1;
     fireworks.start();
     clearInterval(intervalId);
     document.querySelector('.bottom').classList.toggle('fade-out');
